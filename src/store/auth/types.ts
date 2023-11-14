@@ -1,5 +1,7 @@
 import { Action } from "redux";
 
+
+
 export enum AUTH {
     CHECKISLOGGED=  'CHECKISLOGGED', 
     LOGIN = 'LOGIN', 
@@ -9,22 +11,19 @@ export enum AUTH {
 
 export interface loginAction extends Action {
     type: AUTH.LOGIN, 
-    payload: boolean
+    payload: authState
 
 }
 
 export interface logoutAction extends Action {
     type: AUTH.LOGOUT, 
-    payload: null
+    payload: authState
 
 }
 
 export interface signupAction extends Action {
     type: AUTH.SIGNUP, 
-    payload: {
-        isLogged: boolean, 
-        uid: string
-    }
+    payload: authState
 }
 
 
