@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 const Login = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
-  function handleSubmit( e: FormEvent<HTMLFormElement>){
+  async function handleSubmit( e: FormEvent<HTMLFormElement>){
       e.preventDefault();
       const { elements } = e.currentTarget
 

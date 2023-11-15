@@ -10,7 +10,7 @@ export const initialState: authState = {
 export const auth:  Reducer<authState, authActions> =  (state = initialState, { type, payload }) => {
   switch (type) {
   case AUTH.LOGIN:
-      return { ...state, isLogged: payload}
+      return { ...state, isLogged: payload.isLogged}
   case AUTH.LOGOUT: 
     return {...state, isLogged: false}
   case AUTH.SIGNUP:

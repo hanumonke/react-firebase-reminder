@@ -1,2 +1,2 @@
-export * from './firebase.ts';
+export  * from './firebase.ts';
 

@@ -4,9 +4,9 @@ import { useTypedSelector } from "../store";
 const Home = () => {
   const dispatch = useDispatch();
   const {uid} = useTypedSelector(state => state.auth);
-  const handleLogout = () => {
+  const handleLogout = async () => {
     alert('youre loggin out')
-    dispatch(logout())
+    dispatch(await logout())
   }
   return (
     <>
