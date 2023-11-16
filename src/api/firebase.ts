@@ -6,12 +6,12 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, si
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB0LX7s5Aelfpj55WZBK3L8lSMvArDLp8U",
-  authDomain: "fir-reminder-8fb9a.firebaseapp.com",
-  projectId: "fir-reminder-8fb9a",
-  storageBucket: "fir-reminder-8fb9a.appspot.com",
-  messagingSenderId: "939271880339",
-  appId: "1:939271880339:web:b1fa595a0bc6e40ea39766"
+  apiKey: import.meta.env.API_KEY,
+  authDomain: import.meta.env.AUTH_DOMAIN,
+  projectId: import.meta.env.PROJECT_ID,
+  storageBucket: import.meta.env.STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.MESSAGING_SENDER_ID,
+  appId: import.meta.env.APP_ID
 };
 
 // Initialize Firebase
@@ -45,7 +45,7 @@ setPersistence(auth, browserSessionPersistence)
 
 
 export const createUserEmailPassword = (user: User) => {
-    return createUserWithEmailAndPassword(auth, user.username, user.password)
+  return createUserWithEmailAndPassword(auth, user.username, user.password)
 }
 
 export const loginUserEmailPassword = (user: User) => {
