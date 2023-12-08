@@ -3,6 +3,7 @@ import { AUTH, loginAction, logoutAction, signupAction } from "./types";
 
 
 // CREO QUE NECESITO REDUX THUNK PQ SON ACTIONS ASINCRONAS
+// comentario para probar git. 
 export const login = (user: User): loginAction => {
    let uid= '';
    let isLogged= false; 
